@@ -33,10 +33,10 @@ public class Fibonaci {
 
     public static void main(String[] args) {
 //        System.out.println(new Fibonaci().fibonacciByIteration(10));
-        int n = 10;
+        int n = 100;
         Fibonaci fibonaci = new Fibonaci();
         for (int i = 0; i < n; i++) {
-            System.out.println("i : " + fibonaci.fibonacciByRecursion(i));
+            System.out.println(i +" : " + fibonaci.fibonacciByRecursion(i));
         }
     }
 

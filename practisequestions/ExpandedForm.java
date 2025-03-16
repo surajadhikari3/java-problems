@@ -19,14 +19,6 @@ public class ExpandedForm {
         System.out.println("expanded form: " + expandedForm);
     }
 
-    public String concatenateZeros(int n) {
-        String zeros = "";
-        for (int i = 0; i < n; i++) {
-            zeros += "0";
-        }
-        return zeros;
-    }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number to find out the expanded form for:");
