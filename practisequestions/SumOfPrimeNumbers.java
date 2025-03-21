@@ -27,9 +27,6 @@ public class SumOfPrimeNumbers {
         int number = scanner.nextInt();
 
         int sum = 0;
-
-
-
         for (int i = 1; i <= number; i++) {
             boolean prime = sumOfPrimeNumbers.isPrime(i);
             sum += i;

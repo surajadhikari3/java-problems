@@ -14,16 +14,13 @@ public class Factorial {
 
     public int findFactorialRecursively(int n) {
         // while doing the recursion there should be stopping condn always so the line 16 and 17 is there...
-        if (n == 0 | n == 1) {
+        if (n <= 1) {
             return 1;
         }
         return n * findFactorialRecursively(n - 1);
     }
 
     public static void main(String[] args) {
-        new Factorial().findFactorial(10);
-//        for (int i = 1; i < 3; i++) {
-            System.out.println("Recursively: " + new Factorial().findFactorialRecursively(10));
-//        }
+        System.out.println("Recursively: " + new Factorial().findFactorialRecursively(15));
     }
 }

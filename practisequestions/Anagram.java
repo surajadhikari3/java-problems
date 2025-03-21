@@ -5,8 +5,7 @@ import java.util.stream.Stream;
 
 public class Anagram {
 
-    //Anagram strings are those strings that have the same characters, only the order of characters may be differ-
-    //ent
+    //Anagram strings are those strings that have the same characters, only the order of characters may be different..
 
     public boolean checkAnagram(String firstString, String secondString) {
 
