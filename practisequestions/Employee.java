@@ -233,7 +233,7 @@ public class Employee {
 
     public static void checkDuplicatesIdAndReassignId(List<Employee> employee) {
         //For the duplicate elements we can use the hashset with the java streams....
-        HashSet<Long> employeeIds = new HashSet<>();
+        Set<Long> employeeIds = new HashSet<>();
 
         List<Employee> duplicateList = employee.stream()
                 .filter(emp -> !employeeIds.add(emp.employeeId))
