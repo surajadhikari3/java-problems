@@ -1,7 +1,6 @@
-package practisequestions;
+package practisequestions.interview.streams;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 

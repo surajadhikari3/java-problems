@@ -1,4 +1,6 @@
-package practisequestions;
+package practisequestions.interview.streams;
+
+import practisequestions.Course;
 
 import java.util.List;
 
