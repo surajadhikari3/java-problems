@@ -2,9 +2,9 @@ package practisequestions;
 
 //Check if the input string is alphanumeric
 public class AlphaNumeric {
-    public boolean checkAlphaNumeric(String input){
+    public boolean checkAlphaNumeric(String input) {
         for (int i = 0; i < input.length(); i++) {
-            if (!Character.isLetterOrDigit(input.charAt(i))){
+            if (!Character.isLetterOrDigit(input.charAt(i))) {
                 return false;
             }
         }

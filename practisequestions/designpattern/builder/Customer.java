@@ -12,7 +12,7 @@ public class Customer {
     private int age;
     private String address;
 
-    public Customer(Builder builder){
+    public Customer(Builder builder) {
         this.id = builder.id;
         this.name = builder.name;
         this.age = builder.age;
@@ -21,12 +21,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", address='" + address + '\'' +
-                '}';
+        return "Customer{" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + ", address='" + address + '\'' + '}';
     }
 
     public long getId() {
@@ -45,7 +40,7 @@ public class Customer {
         return address;
     }
 
-    public static class Builder{
+    public static class Builder {
         private long id;
         private String name;
         private int age;
@@ -53,27 +48,27 @@ public class Customer {
 
         //Builder method to set the properties......
 
-        public Builder setId(long id){
+        public Builder setId(long id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(String name){
+        public Builder setName(String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setAge(int age){
+        public Builder setAge(int age) {
             this.age = age;
             return this;
         }
 
-        public Builder setAddress(String address){
+        public Builder setAddress(String address) {
             this.address = address;
             return this;
         }
 
-        public Customer build(){
+        public Customer build() {
             return new Customer(this);
         }
 
@@ -81,11 +76,7 @@ public class Customer {
 
     public static void main(String[] args) {
 
-        Customer customer = new Builder()
-                .setId(1)
-                .setName("Suraj")
-                .setAddress("Toronto")
-                .build();
+        Customer customer = new Builder().setId(1).setName("Suraj").setAddress("Toronto").build();
 
         System.out.println(customer);
     }
