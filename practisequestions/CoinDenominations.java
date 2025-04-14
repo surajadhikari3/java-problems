@@ -2,9 +2,7 @@ package practisequestions;
 
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+
 
 /**
  * You are given a list of coin denominations (e.g., [1, 5, 10, 25]). You are also given a total amount (e.g., 11, 13, 4, 65). Your task is to determine
@@ -46,7 +44,6 @@ public class CoinDenominations {
 
         sortedDividedList.forEach(data -> System.out.println("check " + data));
 
-//        List<Integer> minimumSequenceCombination = new ArrayList<>();
         double divisor;
         int remainder = 0;
         int remainderHolder;
