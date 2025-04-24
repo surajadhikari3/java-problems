@@ -12,6 +12,7 @@ public class CallableClass implements Callable<String> {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         Future<String> future = executorService.submit(new CallableClass());
+
         System.out.println(future.get());
         executorService.shutdown();
     }

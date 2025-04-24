@@ -19,16 +19,16 @@ public class CoinDenominations {
 
     public static void main(String[] args) {
 
-        int[] denomination = {2, 5, 10, 25};
+//        int[] denomination = {2, 5, 10, 25};
 //        int totalAmount = 57;
-        int totalAmount = 65;
+//        int totalAmount = 65;
 //        int totalAmount = 11;
 //        int totalAmount = 13;
 //        int totalAmount = 4;
 
-//        int[] denomination = {2, 3, 5};
-//        int totalAmount = 31;
-        System.out.println(calculateMinimumCoinDenominations(denomination, totalAmount));
+        int[] denomination = {2, 3, 5};
+        int totalAmount = 99;
+            System.out.println(calculateMinimumCoinDenominations(denomination, 10));
     }
 
 
@@ -36,13 +36,15 @@ public class CoinDenominations {
         int[] sortedDenomination = Arrays.stream(denomination).sorted().toArray();
         List<Integer> sortedDividedList = new ArrayList<>();
 
+        if(totalAmount == 0) return false;
+
         for (int i = sortedDenomination.length - 1; i >= 0; i--) {
             if (sortedDenomination[i] <= totalAmount) {
                 sortedDividedList.add(sortedDenomination[i]);
             }
         }
 
-        sortedDividedList.forEach(data -> System.out.println("check " + data));
+//        sortedDividedList.forEach(data -> System.out.println("check " + data));
 
         double divisor;
         int remainder = 0;
@@ -51,7 +53,7 @@ public class CoinDenominations {
         for (int i = 0; i < sortedDividedList.size(); i++) {
             int z = Math.min(i + 1, sortedDividedList.size() - 1);
             int currentFace = sortedDividedList.get(i);
-            System.out.println("currentFace " + currentFace);
+//            System.out.println("currentFace " + currentFace);
             //case 1 --> Directly divisible by the first biggest element
             if (i == 0) {
                 if (totalAmount % currentFace == 0) {
@@ -81,7 +83,7 @@ public class CoinDenominations {
                 }
             }
             int checkCondition = Math.min(z+1, sortedDividedList.size()-1);
-            //Check for the corner cases like 19,21,31......
+            //Check for the corner cases like 19,21,31,51......
             if (remainder < sortedDividedList.get(z)) {
                int  tempRemainder = (currentFace + remainder);
                 if (tempRemainder % sortedDividedList.get(z) == 0 || tempRemainder % sortedDividedList.get(checkCondition) == 0){
@@ -93,8 +95,8 @@ public class CoinDenominations {
             setSequence(divisor, currentFace);
 
         }
-
-        minimumSequenceCombination.forEach(test -> System.out.println("All the coins Combination " + test));
+        System.out.println("Comb for "+ totalAmount + ": "  + minimumSequenceCombination);
+//        minimumSequenceCombination.forEach(test -> System.out.println("All the coins Combination " + test));
         System.out.println("Minimum coin combination " + minimumSequenceCombination.size());
 
         return minimumSequenceCombination.stream().reduce(0, Integer::sum).equals(totalAmount);
