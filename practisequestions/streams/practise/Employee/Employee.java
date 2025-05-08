@@ -1,8 +1,10 @@
 package practisequestions.streams.practise.Employee;
 
+
 public class Employee {
     private String name;
     private String email;
+
 
     public Employee(String name, String email){
         this.name = name;

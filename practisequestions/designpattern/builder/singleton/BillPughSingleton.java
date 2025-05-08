@@ -6,7 +6,7 @@ package practisequestions.designpattern.builder.singleton;
  * Key Takeaways
  * ✅ static final ensures INSTANCE is created only once.
  * ✅ JVM class loading is thread-safe, preventing race conditions.
- * ✅ Lazy initialization: Instance is created only when getInstance() is first called.
+ * ✅ Lazy initialization: Instance is created only when getInstance() is first called as it is inside the static method..
  * ✅ Efficient and fast: No need for synchronization like synchronized blocks.
  */
 

@@ -24,7 +24,7 @@ public class BlockingQueue {
                 }
         };
 
-        new Thread(producer).start();
+        new Thread(producer).start(); //jvm will call the run() method and it executes in parallelism....
         new Thread(consumer).start();
     }
 }
