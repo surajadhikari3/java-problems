@@ -9,7 +9,6 @@ public class SumOfUniqueElements {
 
         int sum = Arrays.stream(arr).distinct().reduce(0, Integer::sum);
         System.out.println(sum);
-
     }
 
 }

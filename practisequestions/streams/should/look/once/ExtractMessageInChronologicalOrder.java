@@ -17,8 +17,8 @@ public class ExtractMessageInChronologicalOrder {
         //it's better to convert to the integer while doing comparison as it get the
         List<String> list = logs.stream().sorted(Comparator.comparing((String log) -> log.split(":")[0]) //HH here when we apply the thenComparing it got converted to the object so we are mapping to the string..
                 .thenComparing(log -> log.split(":")[1]) //min
-                .thenComparing(log -> Integer.parseInt(log.split(":")[2])) //id here we are only considering the single digit id in the string but for the double and single digit comparison
-        ).map(log -> log.split(":", 4)[3]).toList();
+                .thenComparing(log -> Integer.parseInt(log.split(":")[2])) //id here we are only considering the single digit id in the string but for the double and single digit comparison we convert to the int and do the comparison........
+        ).map(log -> log.split(":")[3]).toList();
 
         System.out.println(list);
     }

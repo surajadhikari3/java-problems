@@ -3,6 +3,7 @@ package practisequestions.streams.should.look.once;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PrintInDescendingOrderStartsWith1 {
     public static void main(String[] args) {
@@ -10,9 +11,10 @@ public class PrintInDescendingOrderStartsWith1 {
 
         List<Integer> list = Arrays.stream(arr)
                 .distinct()
-                .boxed()
                 .filter(x -> String.valueOf(x).startsWith("1"))
-               .sorted(Comparator.reverseOrder()).toList();
+                .boxed()
+                .sorted(Comparator.reverseOrder())
+                .toList();
         System.out.println(list);
     }
 }

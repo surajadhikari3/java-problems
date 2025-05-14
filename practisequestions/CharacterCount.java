@@ -12,6 +12,7 @@ public class CharacterCount {
         String sortedInput = Stream.of(input.split("")).sorted().collect(Collectors.joining());
         HashMap<Character, Integer> countKeeper = new HashMap<>();
         for (int i = 0; i < input.length(); i++) {
+//            countKeeper.put(input.charAt(i), countKeeper.containsKey(input.charAt(i)) ? countKeeper.get(input.charAt(i)) + 1 : 1);
             countKeeper.put(input.charAt(i), countKeeper.containsKey(input.charAt(i)) ? countKeeper.get(input.charAt(i)) + 1 : 1);
         }
 

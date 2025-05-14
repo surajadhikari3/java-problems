@@ -29,7 +29,7 @@ Common use-case	        Group items (e.g., people by age group)	    Map item pro
 public class DivideListEvenAndOdd {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8};
-        Map<Boolean, List<Integer>> collect = Arrays.stream(arr).boxed().collect(Collectors.groupingBy(x -> x % 2 == 0, Collectors.toList()));
+        Map<Boolean, List<Integer>> collect = Arrays.stream(arr).boxed().collect(Collectors.groupingBy(x -> x % 2 == 0));
         System.out.println(collect);
     }
 }

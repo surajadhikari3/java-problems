@@ -19,7 +19,6 @@ public class RemoveElement {
     }
 
 
-
     public static int removeElementOptimalSolution(int[] nums, int val){
         int pointer = 0;
         for (int i = 0; i < nums.length ; i++) {
@@ -31,12 +30,6 @@ public class RemoveElement {
         System.out.println("check" + Arrays.toString(nums));
         return pointer;
     }
-
-
-
-
-
-
 
 
     public static int removeElementFirstApproach(int[] nums, int val) {

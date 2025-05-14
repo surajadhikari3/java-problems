@@ -1,5 +1,7 @@
 package practisequestions.streams.should.look.once;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -34,5 +36,18 @@ public class First10FibonacciSequence {
                 .map(pair -> pair[0])
                 .toList();
         System.out.println(list);
+
+
+        int a = 0;
+        int b= 1;
+        List<Integer> integers = new ArrayList<>(List.of(0, 1));
+        for (int i = 0; i < 10; i++) {
+            int sum = a+ b;
+            a = b;
+            b = sum;
+            integers.add(sum);
+        }
+        System.out.println(integers);
+
     }
 }
