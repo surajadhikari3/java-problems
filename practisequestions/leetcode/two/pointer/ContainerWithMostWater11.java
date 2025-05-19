@@ -14,7 +14,7 @@ public class ContainerWithMostWater11 {
         while (i < j) {
             area = Math.min(height[i], height[j]) * (j - i);
             maxArea = Math.max(maxArea, area);
-            int i1 = (height[i] - height[j] > 0) ? j-- : i++; // here we are checking the height as the water remains in the low region so we move the low height pointer to the high height pointer....
+            int i1 = (height[i] - height[j] > 0) ? j-- : i++; //just moving the lowe height and keeping the highest height constant at a time
         }
         return maxArea;
     }
