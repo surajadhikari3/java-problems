@@ -7,6 +7,9 @@ public class TwoSumII167 {
     public static void main(String[] args) {
       int[] numbers =  {2,7,11,15};
         int target = 9;
+
+//        int[] numbers={-1,-2,-3,-4,-5};
+//        int target = -8;
         System.out.println(Arrays.toString(twoSum(numbers, target)));
     }
 

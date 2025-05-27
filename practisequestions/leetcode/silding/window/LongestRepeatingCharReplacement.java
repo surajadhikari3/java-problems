@@ -5,25 +5,39 @@ import java.util.HashMap;
 public class LongestRepeatingCharReplacement {
 
     public static void main(String[] args) {
-//        Input: s = "AAABABB", k = 1
+//        String s = "AAABABB";
+        String s = "XYYX";
+//        String s = "AAAA";
+        int k = 2;
 
-//        Output: 5
+        System.out.println(characterReplacement(s, k));
     }
 
+    //Here the concept we keep on add and get the max character count but if the window is invalid we shrink the window from left and decrement the character from map.
     public static int characterReplacement(String s, int k) {
+
+//        window = rt-lft+1;
         int lft = 0;
-        int tr = 0;
-        int windowLength = 1;
-        int maxLength = 1;
-        int highestFrequency = 1;
+        int maxLength = 0;
+        int maxCount = 0;
+        int countSetter = 0;
         HashMap<Character, Integer> map = new HashMap<>();
 
-        for (int i = 0; i < s.length(); i++) {
-            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
-//            windowLength - map.get()
+        for (int rt = 0; rt < s.length(); rt++) {
+            countSetter = map.getOrDefault(s.charAt(rt), 0) + 1;
+            map.put(s.charAt(rt), countSetter);
+            maxCount = Math.max(maxCount, countSetter);
 
+            //if the window is invalid we will shrink the window from lft and decrement the lft character count....
+            if ((rt - lft + 1) - maxCount > k) {
+                map.put(s.charAt(lft), map.get(s.charAt(lft)) - 1);
+                lft++;
+            }
+
+            maxLength = Math.max((rt - lft + 1), maxLength);
         }
 
-        return 0;
+        return maxLength;
     }
+
 }
