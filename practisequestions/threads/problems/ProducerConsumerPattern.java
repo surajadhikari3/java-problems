@@ -48,7 +48,7 @@ public class ProducerConsumerPattern {
                 Trade trade = generateRandomTrade();
                 try {
                     queue.put(trade);
-                    System.out.println("Produced " + trade);
+//                    System.out.println("Produced " + trade);
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();

@@ -4,6 +4,8 @@ import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeSet;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Functional Requirements:

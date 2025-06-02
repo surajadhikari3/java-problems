@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DelayedTrade extends Trade implements Delayed {
     private final long triggerTime; // absolute time in millis when trade should be released
+
     public DelayedTrade(long id, String symbol, int quantity, double price, long timeStamp, long delay) {
         super(id, symbol, quantity, price, timeStamp);
         this.triggerTime = System.currentTimeMillis() + delay;
@@ -19,7 +20,7 @@ public class DelayedTrade extends Trade implements Delayed {
 
     @Override
     public int compareTo(Delayed o) {
-        if(o instanceof DelayedTrade){
+        if (o instanceof DelayedTrade) {
             return Long.compare(this.triggerTime, ((DelayedTrade) o).triggerTime);
         }
         return 0;

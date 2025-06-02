@@ -56,9 +56,12 @@ public class Fibonaci {
     public static void main(String[] args) {
 //        new Fibonaci().findFibonaciSeriesRegular(100);
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) { //For getting the sequence if fibinacii numbers...
             System.out.println("Fibonaaci : " + i + " " + new Fibonaci().findFibonaciWithRecursion(i));
         }
+
+        System.out.println("Fiboo " + new Fibonaci().findFibonaciWithRecursion(10)); //For getting the speicific fibonnaci
+
     }
 
 

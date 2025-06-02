@@ -1,6 +1,7 @@
 package practisequestions.leetcode.two.pointer;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class TwoSumNeet {
     public static void main(String[] args) {
@@ -11,6 +12,10 @@ public class TwoSumNeet {
         System.out.println(Arrays.toString(twoSum(nums, target)));
     }
     public static int[] twoSum(int[] nums, int target) {
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        String[] split = String.valueOf(target).split("");
         Arrays.sort(nums);
         int i = 0;
         int j = nums.length-1;
