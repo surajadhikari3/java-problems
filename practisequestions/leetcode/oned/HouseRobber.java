@@ -10,6 +10,7 @@ public class HouseRobber {
     //Time complexity --> 0(n)
     //Space complexity --> 0(n)
     //Even though its space complexity is doing for understanding........
+
     public static int rob1(int[] nums) {
         if (nums.length == 1) return nums[0];
         int[] dp = new int[nums.length];
