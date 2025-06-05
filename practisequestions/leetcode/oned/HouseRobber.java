@@ -1,5 +1,7 @@
 package practisequestions.leetcode.oned;
 
+import java.io.BufferedReader;
+
 public class HouseRobber {
     public static void main(String[] args) {
         int[] input = {2, 9, 8, 3, 6};
@@ -19,7 +21,6 @@ public class HouseRobber {
         for (int i = 2; i < nums.length; i++) {
             dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
         }
-
         return dp[nums.length - 1];
     }
 
