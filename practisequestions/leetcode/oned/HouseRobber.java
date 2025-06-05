@@ -7,8 +7,6 @@ public class HouseRobber {
         int[] input = {2, 9, 8, 3, 6};
         System.out.println(rob1(input));
     }
-
-
     //Time complexity --> 0(n)
     //Space complexity --> 0(n)
     //Even though its space complexity is doing for understanding........
